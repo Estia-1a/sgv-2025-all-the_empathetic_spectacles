@@ -3,15 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 768px)"> 
-    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 767px)"> 
-    <title>Document</title>
-    <h1>Site covoiturage ESTIA</h1>
-    <h2>Trajets suggérés</h2>
-    <h2>Votre prochain trajet</h2>
+    <title>Covoit - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo-covoit.png" alt="Covoit Logo" class="logo-img">
+            Covoit
+        </div>
+        <nav class="main-nav">
+            <a href="index.html" class="active"><i class="fas fa-home"></i> Accueil</a>
+            <a href="profile.html"><i class="fas fa-user-circle"></i> Profil</a>
+            <a href="trips.html"><i class="fas fa-car"></i> Trajets</a>
+            <a href="contacts.html"><i class="fas fa-users"></i> Contacts</a>
+        </nav>
+        <button class="auth-btn" onclick="window.location.href='login.html'">M'authentifier</button>
+    </header>
+
+    <main class="container homepage-layout">
+        <section class="left-panel">
+            <div class="search-section">
+                <input type="text" placeholder="Où souhaites-tu aller?" class="search-input">
+            </div>
+
+            <section class="next-trip card">
+                <h2>Votre prochain trajet</h2>
+                <div class="trip-details">
+                    <p class="time"><i class="far fa-clock"></i> Demain 17:30 [cite: 135]</p>
+                    <p class="departure"><i class="fas fa-map-marker-alt"></i> Depuis: ESTIA [cite: 136]</p>
+                    <p class="arrival"><i class="fas fa-map-pin"></i> À: Biarritz [cite: 137]</p>
+                </div>
+                <i class="fas fa-user-circle profile-icon"></i>
+            </section>
+        </section>
+
+        <section class="right-panel suggested-trips card">
+            <h2>Trajets suggérés [cite: 141]</h2>
+            
+            <div class="trip-suggestion-item">
+                <input type="text" value="Trajet 1" readonly>
+                <button class="add-trip-btn"><i class="fas fa-plus-circle"></i></button>
+                <span class="time-info">--:-- [cite: 143]</span>
+            </div>
+            <div class="trip-suggestion-item">
+                <input type="text" value="Trajet 2" readonly>
+                <button class="add-trip-btn"><i class="fas fa-plus-circle"></i></button>
+                <span class="time-info">--:-- [cite: 146]</span>
+            </div>
+            <div class="trip-suggestion-item">
+                <input type="text" value="Trajet 3" readonly>
+                <button class="add-trip-btn"><i class="fas fa-plus-circle"></i></button>
+                <span class="time-info">--:-- [cite: 149]</span>
+            </div>
+            <div class="trip-suggestion-item">
+                <input type="text" value="Trajet 4" readonly>
+                <button class="add-trip-btn"><i class="fas fa-plus-circle"></i></button>
+                <span class="time-info">--:-- [cite: 151]</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <nav>
+            <a href="#">À propos de nous [cite: 138]</a>
+            <a href="#">Contact [cite: 139]</a>
+            <a href="#">Aide [cite: 140]</a>
+        </nav>
+    </footer>
 </body>
 </html>
